@@ -19,6 +19,7 @@
 		CEB7F5C42C074C14002EE168 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7F5C32C074C14002EE168 /* APIConstants.swift */; };
 		CEB7F5C92C075ECD002EE168 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7F5C82C075ECD002EE168 /* ContentViewModel.swift */; };
 		CEB7F5CB2C07A585002EE168 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7F5CA2C07A585002EE168 /* ItemRowView.swift */; };
+		CEB7F5CD2C07B56B002EE168 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7F5CC2C07B56B002EE168 /* LoadingIndicatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		CEB7F5C32C074C14002EE168 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		CEB7F5C82C075ECD002EE168 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		CEB7F5CA2C07A585002EE168 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
+		CEB7F5CC2C07B56B002EE168 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				CEB7F5C82C075ECD002EE168 /* ContentViewModel.swift */,
 				CEB7F5A22C072D07002EE168 /* ContentView.swift */,
 				CEB7F5CA2C07A585002EE168 /* ItemRowView.swift */,
+				CEB7F5CC2C07B56B002EE168 /* LoadingIndicatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			files = (
 				CEB7F5B82C074840002EE168 /* RequestManager.swift in Sources */,
 				CEB7F5BD2C0748F3002EE168 /* NetworkError.swift in Sources */,
+				CEB7F5CD2C07B56B002EE168 /* LoadingIndicatorView.swift in Sources */,
 				CEB7F5A32C072D07002EE168 /* ContentView.swift in Sources */,
 				CEB7F5B22C0744CC002EE168 /* Item.swift in Sources */,
 				CEB7F5CB2C07A585002EE168 /* ItemRowView.swift in Sources */,
