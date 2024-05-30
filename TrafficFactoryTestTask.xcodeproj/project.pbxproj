@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE9F459F2C091C4700C66976 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F459E2C091C4700C66976 /* ItemDetailView.swift */; };
 		CEB7F5A12C072D07002EE168 /* TrafficFactoryTestTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7F5A02C072D07002EE168 /* TrafficFactoryTestTaskApp.swift */; };
 		CEB7F5A32C072D07002EE168 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7F5A22C072D07002EE168 /* ContentView.swift */; };
 		CEB7F5A52C072D0B002EE168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB7F5A42C072D0B002EE168 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE9F459E2C091C4700C66976 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		CEB7F59D2C072D07002EE168 /* TrafficFactoryTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficFactoryTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB7F5A02C072D07002EE168 /* TrafficFactoryTestTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficFactoryTestTaskApp.swift; sourceTree = "<group>"; };
 		CEB7F5A22C072D07002EE168 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				CEB7F5CA2C07A585002EE168 /* ItemRowView.swift */,
 				CEB7F5CC2C07B56B002EE168 /* LoadingIndicatorView.swift */,
 				CEB7F5D22C08ABD3002EE168 /* ItemImageViewModel.swift */,
+				CE9F459E2C091C4700C66976 /* ItemDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9F459F2C091C4700C66976 /* ItemDetailView.swift in Sources */,
 				CEB7F5D32C08ABD3002EE168 /* ItemImageViewModel.swift in Sources */,
 				CEB7F5B82C074840002EE168 /* RequestManager.swift in Sources */,
 				CEB7F5BD2C0748F3002EE168 /* NetworkError.swift in Sources */,

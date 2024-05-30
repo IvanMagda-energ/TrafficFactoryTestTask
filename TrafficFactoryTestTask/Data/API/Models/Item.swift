@@ -14,7 +14,6 @@ struct Item {
     var title: String
     var description: String
     var imageURL: String
-    var image: Image?
 }
 
 // MARK: - Codable
@@ -28,3 +27,6 @@ extension Item: Codable {
 
 // MARK: - Identifiable
 extension Item: Identifiable {}
+
+// MARK: - Hashable
+extension Item: Hashable {}

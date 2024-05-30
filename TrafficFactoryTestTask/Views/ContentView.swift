@@ -10,17 +10,22 @@ import os
 
 struct ContentView: View {
     @State private var viewModel = ContentViewModel()
-    
+    @State private var columnVisibility = NavigationSplitViewVisibility.doubleColumn
+    @State private var selectedItem: Item?
     
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(viewModel.items) { item in
+        NavigationSplitView(columnVisibility: $columnVisibility) {
+            List(viewModel.items, selection: $selectedItem) { item in
+                NavigationLink(value: item) {
                     ItemRowView(item: item)
                 }
             }
+            .navigationTitle("Items")
         } detail: {
-            Color.red
+            if let selectedItem = selectedItem, let image = Cache.shared.getObject(for: selectedItem.imageURL) {
+                ItemDetailView(item: selectedItem, image: image)
+                    .navigationTitle("Item detail")
+            }
         }
         .overlay(alignment: .bottom) {
             if viewModel.isLoading {

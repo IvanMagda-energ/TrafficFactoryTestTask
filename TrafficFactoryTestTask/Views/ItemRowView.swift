@@ -55,10 +55,12 @@ struct ItemRowView: View {
             VStack {
                 Text(item.title)
                     .font(.title)
+                    .bold()
                 
                 Text(item.description)
-                    .font(.caption2)
+                    .font(.headline)
             }
+            .padding()
             .frame(maxWidth: .infinity)
             .background(.ultraThinMaterial)
             .clipShape(.rect(cornerRadius: cornerRadius))
