@@ -78,7 +78,6 @@
 				CEB7F5A02C072D07002EE168 /* TrafficFactoryTestTaskApp.swift */,
 				CEB7F5CE2C088B52002EE168 /* InfoDictionaryKeys.swift */,
 				CEB7F5AF2C0743AF002EE168 /* Data */,
-				CEB7F5D42C08FA0D002EE168 /* Utils */,
 				CEB7F5C72C075E89002EE168 /* Views */,
 				CEB7F5A42C072D0B002EE168 /* Assets.xcassets */,
 				CEB7F5A62C072D0B002EE168 /* Preview Content */,
@@ -98,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB7F5C22C074BEC002EE168 /* API */,
+				CEB7F5D02C089CBE002EE168 /* Cache.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -135,7 +135,6 @@
 				CEB7F5B32C0744DC002EE168 /* Models */,
 				CEB7F5B02C0743C5002EE168 /* Network */,
 				CEB7F5C32C074C14002EE168 /* APIConstants.swift */,
-				CEB7F5D02C089CBE002EE168 /* Cache.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -150,13 +149,6 @@
 				CEB7F5D22C08ABD3002EE168 /* ItemImageViewModel.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		CEB7F5D42C08FA0D002EE168 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

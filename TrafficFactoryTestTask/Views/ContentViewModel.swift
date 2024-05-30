@@ -22,12 +22,13 @@ final class ContentViewModel {
         self.requestManager = requestManager
     }
     
-    // MARK: - Observed properties
+    // MARK: - properties
     private(set) var items = [Item]()
     private(set) var error: Error?
     private(set) var hasError = false
-    private(set) var isLoading = true
+    private(set) var isLoading = false
     
+    /// Fetches all items from a specified URL, updating the `items` property.
     func getAllItems() async {
         defer {
             withAnimation {
@@ -39,7 +40,8 @@ final class ContentViewModel {
                 isLoading = true
             }
             let dataUrlString = Constants.dataURL
-            try await Task.sleep(for: .seconds(1))
+            // The data is loading to fast, so we added some delay to imitate slowly loading data and to se appearing progress indicator.
+            try await Task.sleep(for: .seconds(2))
             items = try await requestManager.initRequest(with: dataUrlString)
             
             logger.debug(#function)

@@ -9,39 +9,47 @@ import SwiftUI
 
 struct ItemRowView: View {
     let item: Item
-    @State private var imageLoader = ItemImageViewModel()
+    @State private var viewModel = ItemImageViewModel()
+    
+    private let cornerRadius: CGFloat = 10
+    private let opacity: Double = 0.5
+    private let placeHolderAspectRatio: Double = 1.2
+    private let placeHolderMaxWidth: CGFloat = 120
+    private let progressViewScale: Double = 2.0
+    private let progressStatusOffset: CGFloat = 110
+    private let imageAspectRatio: Double = 1.0
     
     var body: some View {
         VStack {
             ZStack {
                 Color
                     .gray
-                    .opacity(0.5)
+                    .opacity(opacity)
                 
-                if let image = imageLoader.image {
+                if let image = viewModel.image {
                     image
                         .resizable()
                         
                 } else {
                     Image(systemName: "photo.artframe")
                         .resizable()
-                        .aspectRatio(1.2, contentMode: .fit)
-                        .frame(maxWidth: 120)
+                        .aspectRatio(placeHolderAspectRatio, contentMode: .fit)
+                        .frame(maxWidth: placeHolderMaxWidth)
                     
                     VStack {
                         ProgressView()
-                            .scaleEffect(2.0)
+                            .scaleEffect(progressViewScale)
                             
                         Text("Loading...")
                             .font(.title3)
                             .padding()
                     }
-                    .offset(y: 110)
+                    .offset(y: progressStatusOffset)
                 }
             }
             .frame(maxWidth: .infinity)
-            .aspectRatio(1.0, contentMode: .fill)
-            .clipShape(.rect(cornerRadius: 16))
+            .aspectRatio(imageAspectRatio, contentMode: .fill)
+            .clipShape(.rect(cornerRadius: cornerRadius))
             
             
             VStack {
@@ -53,12 +61,11 @@ struct ItemRowView: View {
             }
             .frame(maxWidth: .infinity)
             .background(.ultraThinMaterial)
-            .clipShape(.rect(cornerRadius: 16))
+            .clipShape(.rect(cornerRadius: cornerRadius))
         }
         .task {
-            await imageLoader.loadAndCacheImage(from: item.imageURL)
-            try? await Task.sleep(for: .seconds(2))
-            imageLoader.getImage(for: item.imageURL)
+            viewModel.loadImage(from: item.imageURL)
+            await viewModel.fetchImageAndCaches(from: item.imageURL)
         }
     }
 }
