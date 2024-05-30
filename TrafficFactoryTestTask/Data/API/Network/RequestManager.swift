@@ -11,6 +11,7 @@ protocol RequestManagerProtocol {
     var apiManager: APIManagerProtocol { get }
     var parser: DataParserProtocol { get }
     func initRequest<T: Decodable>(with urlString: String) async throws -> T
+    func getData(from urlString: String) async throws -> Data
 }
 
 
@@ -30,6 +31,14 @@ class RequestManager: RequestManagerProtocol {
         let data = try await apiManager.initRequest(with: url)
         let decoded: T = try parser.parse(data: data)
         return decoded
+    }
+    
+    func getData(from urlString: String) async throws -> Data {
+        guard let url = URL(string: urlString) else {
+            throw NetworkError.invalidURL
+        }
+        let data = try await apiManager.initRequest(with: url)
+        return data
     }
 }
 

@@ -6,12 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
+import Observation
 
 struct Item {
     var id = UUID()
     var title: String
     var description: String
     var imageURL: String
+    var image: Image?
 }
 
 // MARK: - Codable
@@ -22,10 +25,6 @@ extension Item: Codable {
         case imageURL
     }
 }
-
-// MARK: - Hashable
-extension Item: Hashable {}
-
 
 // MARK: - Identifiable
 extension Item: Identifiable {}

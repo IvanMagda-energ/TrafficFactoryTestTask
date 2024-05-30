@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import os
 
 struct ContentView: View {
     @State private var viewModel = ContentViewModel()
+    
     
     var body: some View {
         NavigationSplitView {
@@ -16,19 +18,16 @@ struct ContentView: View {
                 ForEach(viewModel.items) { item in
                     ItemRowView(item: item)
                 }
-                .onDelete { _ in
-                    
-                }
             }
         } detail: {
-            EmptyView()
+            Color.red
         }
         .overlay(alignment: .bottom) {
             if viewModel.isLoading {
                 LoadingIndicatorView {
                     
                 }
-                    .transition(.scale)
+                .transition(.scale)
             }
         }
         .task {

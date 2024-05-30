@@ -20,6 +20,9 @@
 		CEB7F5C92C075ECD002EE168 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7F5C82C075ECD002EE168 /* ContentViewModel.swift */; };
 		CEB7F5CB2C07A585002EE168 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7F5CA2C07A585002EE168 /* ItemRowView.swift */; };
 		CEB7F5CD2C07B56B002EE168 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7F5CC2C07B56B002EE168 /* LoadingIndicatorView.swift */; };
+		CEB7F5CF2C088B52002EE168 /* InfoDictionaryKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7F5CE2C088B52002EE168 /* InfoDictionaryKeys.swift */; };
+		CEB7F5D12C089CBE002EE168 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7F5D02C089CBE002EE168 /* Cache.swift */; };
+		CEB7F5D32C08ABD3002EE168 /* ItemImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB7F5D22C08ABD3002EE168 /* ItemImageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		CEB7F5C82C075ECD002EE168 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		CEB7F5CA2C07A585002EE168 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		CEB7F5CC2C07B56B002EE168 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		CEB7F5CE2C088B52002EE168 /* InfoDictionaryKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDictionaryKeys.swift; sourceTree = "<group>"; };
+		CEB7F5D02C089CBE002EE168 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		CEB7F5D22C08ABD3002EE168 /* ItemImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				CEB7F5A02C072D07002EE168 /* TrafficFactoryTestTaskApp.swift */,
+				CEB7F5CE2C088B52002EE168 /* InfoDictionaryKeys.swift */,
 				CEB7F5AF2C0743AF002EE168 /* Data */,
+				CEB7F5D42C08FA0D002EE168 /* Utils */,
 				CEB7F5C72C075E89002EE168 /* Views */,
 				CEB7F5A42C072D0B002EE168 /* Assets.xcassets */,
 				CEB7F5A62C072D0B002EE168 /* Preview Content */,
@@ -127,6 +135,7 @@
 				CEB7F5B32C0744DC002EE168 /* Models */,
 				CEB7F5B02C0743C5002EE168 /* Network */,
 				CEB7F5C32C074C14002EE168 /* APIConstants.swift */,
+				CEB7F5D02C089CBE002EE168 /* Cache.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -138,8 +147,16 @@
 				CEB7F5A22C072D07002EE168 /* ContentView.swift */,
 				CEB7F5CA2C07A585002EE168 /* ItemRowView.swift */,
 				CEB7F5CC2C07B56B002EE168 /* LoadingIndicatorView.swift */,
+				CEB7F5D22C08ABD3002EE168 /* ItemImageViewModel.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CEB7F5D42C08FA0D002EE168 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,15 +229,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB7F5D32C08ABD3002EE168 /* ItemImageViewModel.swift in Sources */,
 				CEB7F5B82C074840002EE168 /* RequestManager.swift in Sources */,
 				CEB7F5BD2C0748F3002EE168 /* NetworkError.swift in Sources */,
 				CEB7F5CD2C07B56B002EE168 /* LoadingIndicatorView.swift in Sources */,
 				CEB7F5A32C072D07002EE168 /* ContentView.swift in Sources */,
 				CEB7F5B22C0744CC002EE168 /* Item.swift in Sources */,
 				CEB7F5CB2C07A585002EE168 /* ItemRowView.swift in Sources */,
+				CEB7F5D12C089CBE002EE168 /* Cache.swift in Sources */,
 				CEB7F5B62C074740002EE168 /* DataParser.swift in Sources */,
 				CEB7F5C92C075ECD002EE168 /* ContentViewModel.swift in Sources */,
 				CEB7F5C42C074C14002EE168 /* APIConstants.swift in Sources */,
+				CEB7F5CF2C088B52002EE168 /* InfoDictionaryKeys.swift in Sources */,
 				CEB7F5BA2C07488C002EE168 /* ApiManager.swift in Sources */,
 				CEB7F5A12C072D07002EE168 /* TrafficFactoryTestTaskApp.swift in Sources */,
 			);
