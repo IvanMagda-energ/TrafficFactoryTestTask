@@ -43,6 +43,24 @@ struct ContentView: View {
                 await viewModel.getAllItems()
             }
         }
+        .alert(isPresented: $viewModel.hasError, error: viewModel.error) { error in
+            Button("Ok", role: .cancel) {
+                viewModel.error = nil
+                viewModel.hasError = false
+            }
+            
+            Button("Try again") {
+                Task {
+                    await viewModel.getAllItems()
+                }
+            }
+        } message: { error in
+            if let failureReason = error.failureReason {
+                Text(failureReason)
+            } else {
+                Text("Unknown error")
+            }
+        }
     }
 }
 

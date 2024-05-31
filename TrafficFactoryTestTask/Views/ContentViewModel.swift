@@ -24,9 +24,9 @@ final class ContentViewModel {
     
     // MARK: - properties
     private(set) var items = [Item]()
-    private(set) var error: Error?
-    private(set) var hasError = false
     private(set) var isLoading = false
+    var error: ContentViewModelError?
+    var hasError = false
     
     /// Fetches all items from a specified URL, updating the `items` property.
     func getAllItems() async {
@@ -46,8 +46,35 @@ final class ContentViewModel {
             
             logger.debug(#function)
         } catch {
-            self.error = error
+            self.error = ContentViewModelError.failedToGetAllItems(error)
             self.hasError = true
+        }
+    }
+}
+
+extension ContentViewModel {
+    enum ContentViewModelError: LocalizedError {
+        case failedToGetAllItems(_ error: Error)
+        
+        public var errorDescription: String? {
+            switch self {
+            case .failedToGetAllItems:
+                return "Error"
+            }
+        }
+        
+        public var failureReason: String? {
+            switch self {
+            case .failedToGetAllItems(let error):
+                return "Failed to load all items with error: \(error.localizedDescription)"
+            }
+        }
+        
+        public var helpAnchor: String? {
+            switch self {
+            case .failedToGetAllItems:
+                return "Please try again"
+            }
         }
     }
 }
